@@ -39,7 +39,6 @@ public abstract class AbstractSkeletonEntityMixin extends Monster {
     @Inject(method = "performRangedAttack", at = @At("TAIL"))
     private void gbw$subtractArrow(LivingEntity target, float pullProgress, CallbackInfo ci) {
         if (!level().isClientSide()) {
-            System.out.println(getId() + ": " + gbw$arrows);
             if (--gbw$arrows <= 0) {
                 setItemInHand(ProjectileUtil.getWeaponHoldingHand(this, Items.BOW), ItemStack.EMPTY);
                 reassessWeaponGoal();
