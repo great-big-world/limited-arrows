@@ -9,12 +9,10 @@
     "homepage": "https://greatbigworld.creoii.dev"
   },
   "license": "All-Rights-Reserved",
-  "icon": "assets/limitedarrows/icon.png",
+  "icon": "assets/limited_arrows/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "dev.creoii.greatbigworld.limitedarrows.fabric.LimitedArrowsFabric"
-    ]
+    "main": []
   },
   "mixins": [
     "limitedarrows.mixins.json"
@@ -23,7 +21,5 @@
     "fabricloader": ">=0.19.5",
     "minecraft": "~26.3",
     "java": ">=25"
-    ,"architectury": ">=22.0.4"
-    ,"fabric-api": "*"
   }
 }

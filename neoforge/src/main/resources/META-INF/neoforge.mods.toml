@@ -12,7 +12,7 @@ description = '''
 Skeletons & other Bow/Crossbow mobs have a limited Arrow supply
 '''
 displayURL="https://greatbigworld.creoii.dev"
-#iconFile = ""
+iconFile = "src/main/resources/assets/limited_arrows/icon.png"
 
 [[dependencies.limited_arrows]]
 modId = "neoforge"
