@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "limited_arrows",
+  "version": "${version}",
+  "name": "Limited Arrows",
+  "description": "Skeletons & other Bow/Crossbow mobs have a limited Arrow supply",
+  "authors": ["creoii"],
+  "contact": {
+    "homepage": "https://greatbigworld.creoii.dev"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/limitedarrows/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.creoii.greatbigworld.limitedarrows.fabric.LimitedArrowsFabric"
+    ]
+  },
+  "mixins": [
+    "limitedarrows.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25"
+    ,"architectury": ">=22.0.4"
+    ,"fabric-api": "*"
+  }
+}

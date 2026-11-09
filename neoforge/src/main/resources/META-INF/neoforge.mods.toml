@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "limited_arrows"
+version = "${version}"
+displayName = "Limited Arrows"
+authors = "creoii"
+description = '''
+Skeletons & other Bow/Crossbow mobs have a limited Arrow supply
+'''
+displayURL="https://greatbigworld.creoii.dev"
+#iconFile = ""
+
+[[dependencies.limited_arrows]]
+modId = "neoforge"
+type = "required"
+versionRange = "[26,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.limited_arrows]]
+modId = "minecraft"
+type = "required"
+versionRange = "[26.3,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "limitedarrows.mixins.json"
