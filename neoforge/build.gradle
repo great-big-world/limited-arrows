@@ -41,8 +41,6 @@ repositories {
 dependencies {
     neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
 
-    implementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
-
     common(project(':limited-arrows:common')) { transitive false }
     shadowBundle(project(path: ':limited-arrows:common', configuration: 'transformProductionFabric')) { transitive false }
 

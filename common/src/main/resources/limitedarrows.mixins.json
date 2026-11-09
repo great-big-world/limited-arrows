@@ -3,8 +3,6 @@
   "package": "dev.creoii.greatbigworld.limitedarrows.mixin",
   "compatibilityLevel": "JAVA_25",
   "minVersion": "0.8",
-  "client": [
-  ],
   "mixins": [
     "AbstractSkeletonEntityMixin"
   ],
