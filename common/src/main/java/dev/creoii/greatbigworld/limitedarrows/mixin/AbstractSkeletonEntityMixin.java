@@ -25,7 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(AbstractSkeleton.class)
 public abstract class AbstractSkeletonEntityMixin extends Monster {
     @Shadow public abstract void reassessWeaponGoal();
-    @Unique private static int gbw$arrows = Integer.MAX_VALUE;
+    @Unique private int gbw$arrows = Integer.MAX_VALUE;
 
     protected AbstractSkeletonEntityMixin(EntityType<? extends Monster> entityType, Level world) {
         super(entityType, world);
@@ -38,9 +38,12 @@ public abstract class AbstractSkeletonEntityMixin extends Monster {
 
     @Inject(method = "performRangedAttack", at = @At("TAIL"))
     private void gbw$subtractArrow(LivingEntity target, float pullProgress, CallbackInfo ci) {
-        if (--gbw$arrows <= 0) {
-            setItemInHand(ProjectileUtil.getWeaponHoldingHand(this, Items.BOW), ItemStack.EMPTY);
-            reassessWeaponGoal();
+        if (!level().isClientSide()) {
+            System.out.println(getId() + ": " + gbw$arrows);
+            if (--gbw$arrows <= 0) {
+                setItemInHand(ProjectileUtil.getWeaponHoldingHand(this, Items.BOW), ItemStack.EMPTY);
+                reassessWeaponGoal();
+            }
         }
     }
 
