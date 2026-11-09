@@ -12,7 +12,12 @@
   "icon": "assets/limited_arrows/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": []
+    "main": [
+      "dev.creoii.greatbigworld.limitedarrows.fabric.LimitedArrowsFabric"
+    ],
+    "modmenu": [
+      "dev.creoii.greatbigworld.limitedarrows.fabric.compat.ModMenuIntegration"
+    ]
   },
   "mixins": [
     "limitedarrows.mixins.json"

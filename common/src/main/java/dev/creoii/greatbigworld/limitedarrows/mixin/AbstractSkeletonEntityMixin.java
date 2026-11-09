@@ -1,5 +1,6 @@
 package dev.creoii.greatbigworld.limitedarrows.mixin;
 
+import dev.creoii.greatbigworld.limitedarrows.LimitedArrows;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.ItemTags;
@@ -37,12 +38,12 @@ public abstract class AbstractSkeletonEntityMixin extends Monster {
     }
 
     @Inject(method = "finalizeSpawn", at = @At("RETURN"))
-    private void gbw$initRandomArrowCount(ServerLevelAccessor world, DifficultyInstance difficulty, EntitySpawnReason spawnReason, SpawnGroupData entityData, CallbackInfoReturnable<SpawnGroupData> cir) {
-        gbw$arrows = random.nextIntBetweenInclusive(10, 20); // TODO: Config
+    private void gbw$initRandomArrowCount(ServerLevelAccessor level, DifficultyInstance difficulty, EntitySpawnReason spawnReason, SpawnGroupData groupData, CallbackInfoReturnable<SpawnGroupData> cir) {
+        gbw$arrows = random.nextIntBetweenInclusive(LimitedArrows.getMinArrows(), LimitedArrows.getMaxArrows());
     }
 
     @Inject(method = "performRangedAttack", at = @At("TAIL"))
-    private void gbw$subtractArrow(LivingEntity target, float pullProgress, CallbackInfo ci) {
+    private void gbw$subtractArrow(LivingEntity target, float power, CallbackInfo ci) {
         if (!level().isClientSide()) {
             if (--gbw$arrows <= 0) {
                 setItemInHand(ProjectileUtil.getWeaponHoldingHand(this, Items.BOW), ItemStack.EMPTY);
@@ -66,7 +67,7 @@ public abstract class AbstractSkeletonEntityMixin extends Monster {
     @Override
     public void dropFromLootTable(ServerLevel level, DamageSource source, boolean playerKilled, ResourceKey<LootTable> lootTable) {
         dropFromLootTable(level, source, playerKilled, lootTable, itemStack -> {
-            if (itemStack.is(ItemTags.ARROWS) && gbw$arrows <= 0) return;
+            if (LimitedArrows.modifyArrowLoot() && itemStack.is(ItemTags.ARROWS) && gbw$arrows <= 0) return;
             spawnAtLocation(level, itemStack);
         });
     }

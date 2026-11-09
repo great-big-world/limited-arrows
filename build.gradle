@@ -1,4 +1,8 @@
 
+repositories {
+    maven { url "https://maven.shedaniel.me/" }
+}
+
 def properties = new Properties()
 
 file('gradle.properties').withInputStream {

@@ -1,0 +1,12 @@
+{
+  "title.limited_arrows.config": "Limited Arrows Configuration",
+  "limited_arrows.config.category.general": "General",
+  "limited_arrows.config.option.minArrows": "Minimum Arrows",
+  "limited_arrows.config.option.minArrows.tooltip": "Min # of Arrows a Skeleton can use before running out",
+  "limited_arrows.config.option.minArrows.value": "%s",
+  "limited_arrows.config.option.maxArrows": "Maximum Arrows",
+  "limited_arrows.config.option.maxArrows.tooltip": "Max # of Arrows a Skeleton can use before running out",
+  "limited_arrows.config.option.maxArrows.value": "%s",
+  "limited_arrows.config.option.none": "None",
+  "limited_arrows.config.option.infinity": "Infinite"
+}

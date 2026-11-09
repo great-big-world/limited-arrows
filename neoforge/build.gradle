@@ -47,6 +47,8 @@ dependencies {
     constraints {
         implementation("io.github.llamalad7:mixinextras-neoforge:$rootProject.mixinextras_version")
     }
+
+    api("me.shedaniel.cloth:cloth-config-neoforge:$rootProject.cloth_config_version")
 }
 
 processResources {
