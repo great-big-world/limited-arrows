@@ -14,3 +14,35 @@
 [Architectury Transformer DEBUG] Writing dev/creoii/greatbigworld/limitedarrows/LimitedArrows with maxs=true frames=true
 [Architectury Transformer DEBUG] Closed File Systems for C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar
 [Architectury Transformer] Transformed jar with 4 transformer(s) in 77.03 ms
+[Architectury Transformer DEBUG] 
+[Architectury Transformer DEBUG] ============================
+[Architectury Transformer DEBUG] Transforming from C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-dev.jar to C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar
+[Architectury Transformer DEBUG] ============================
+[Architectury Transformer DEBUG] 
+[Architectury Transformer DEBUG] Transforming 4 transformer(s) from C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-dev.jar to C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar: 
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@5f1eb19e
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@34c28d4d
+[Architectury Transformer DEBUG]  - AddRefmapName(enabled=dev.architectury.plugin.transformers.AddRefmapName$$Lambda/0x0000000005a535f8@538b08d3)
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@ed402b5
+[Architectury Transformer DEBUG] Transforming from C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-dev.jar to C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar with 4 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing dev/creoii/greatbigworld/limitedarrows/mixin/AbstractSkeletonEntityMixin with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing dev/creoii/greatbigworld/limitedarrows/LimitedArrows with maxs=true frames=true
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar
+[Architectury Transformer] Transformed jar with 4 transformer(s) in 7.086 ms
+[Architectury Transformer DEBUG] 
+[Architectury Transformer DEBUG] ============================
+[Architectury Transformer DEBUG] Transforming from C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-dev.jar to C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar
+[Architectury Transformer DEBUG] ============================
+[Architectury Transformer DEBUG] 
+[Architectury Transformer DEBUG] Transforming 4 transformer(s) from C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-dev.jar to C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar: 
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@1feea1f0
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@61057f86
+[Architectury Transformer DEBUG]  - AddRefmapName(enabled=dev.architectury.plugin.transformers.AddRefmapName$$Lambda/0x0000000005a535f8@538b08d3)
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@6d0b0ac3
+[Architectury Transformer DEBUG] Transforming from C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-dev.jar to C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar with 4 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing dev/creoii/greatbigworld/limitedarrows/mixin/AbstractSkeletonEntityMixin with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing dev/creoii/greatbigworld/limitedarrows/LimitedArrows with maxs=true frames=true
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\jackr\Documents\Projects\Mods\pack\limited-arrows\common\build\libs\common-transformProductionFabric.jar
+[Architectury Transformer] Transformed jar with 4 transformer(s) in 7.724 ms

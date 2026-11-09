@@ -1,6 +1,10 @@
 package dev.creoii.greatbigworld.limitedarrows.mixin;
 
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,6 +18,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.level.storage.loot.LootTable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -56,5 +61,13 @@ public abstract class AbstractSkeletonEntityMixin extends Monster {
     protected void readAdditionalSaveData(ValueInput input) {
         super.readAdditionalSaveData(input);
         gbw$arrows = input.getIntOr("arrows", Integer.MAX_VALUE);
+    }
+
+    @Override
+    public void dropFromLootTable(ServerLevel level, DamageSource source, boolean playerKilled, ResourceKey<LootTable> lootTable) {
+        dropFromLootTable(level, source, playerKilled, lootTable, itemStack -> {
+            if (itemStack.is(ItemTags.ARROWS) && gbw$arrows <= 0) return;
+            spawnAtLocation(level, itemStack);
+        });
     }
 }
